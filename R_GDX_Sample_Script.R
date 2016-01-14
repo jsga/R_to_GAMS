@@ -51,7 +51,7 @@ tmp.in<-inputGDX2('test_2D',tmp,Time,Generators)
 # Create GDX Input file
 wgdx('Input',set.i,set.t, demand.in, Pmax.in,Pmin.in, Cost.in, tmp.in,  squeeze = 'n')
 
-# Run the gams script
+# Run the gams script - change the first variable to the path of your GAMS executable
 system('C:/GAMS/win64/24.2/gams.exe Sample_Script.gms lo=3')
 
 # Unpack the outputs
