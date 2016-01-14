@@ -1,5 +1,6 @@
 # R_to_GAMS
 This repository contains fuctions to facilitate the transfer of data between R and GAMS through the creation and reading of GDX files. 
 A sample project is included to illustrate the operation of the developed functions.
-The functions have been developed in collaboration with Javier Saez Gallego.
+I developed these functions in collaboration with Javier Saez Gallego during my PhD studies at the Technical University of Denmark.
 
+The functions that facilitate the read/write of GDX files are contained in R_to_GDX.R, while their use is briefly demonstrated in R_to_GDX_Sample_Script.R. To run the script, you must change the path of the GAMS exectutable at the points indicated in the script to the path relevant for your system. R_to_GDX_Sample_Script.R builds the input GDX files required for the optimisation contained in Sample_Script.gms (which is part of the GAMS project Sample_project.gpr) using the functions contained in R_to_GDX.R. This is very simple optimisation problem that determines the optimal dispatch of power generation units to meet a time varying load. The outputs of this optimisation, the cost of meeting the load and the operating points of the generation units, are passed back to the R script through the Output.gdx file that is created by GAMS. These outputs are then read and reshaped to an easily understood form by the functions that we developed in R_to_GDX.R.
