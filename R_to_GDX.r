@@ -156,4 +156,6 @@ ProcessRGDX <-function(GDXName, VarName, VarSets=NULL, VarSetNames=NULL, ReShape
 #          VarName (Name of the variable you wish to read, string)
 ProcessRGDX_SingleValue<-function(GDXName, VarName){
   a<-rgdx(GDXName, list(name=VarName))$val
+  # If a is empty then equal to zero
+  return(ifelse(length(a)==0,0,a))
 }
